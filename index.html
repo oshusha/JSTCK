@@ -6,16 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>JSTCK</title>
-    <!-- Зачем нам нормалайз? -->
-    <!-- <link rel="stylesheet" href="./vendor/normalize.css"> -->
     <link rel="stylesheet" href="./pages/index.css" />
 </head>
-
-<!--
-На сайте bem.info в body реализован класс
-https://yadi.sk/i/z76v3NQyE_3Hig
--->
-
 <body class="page">
     <header class="header">
         <div class="header__wrapper">
@@ -25,40 +17,40 @@ https://yadi.sk/i/z76v3NQyE_3Hig
                 <nav class="header__navigation">
                     <ul class="header__navigation-list">
                         <li class="header__navigation-item">
-                            <a href="#" class="header__navigation-link">Как это работает</a>
+                            <a href="#how-works" class="header__navigation-link">Как это работает</a>
                         </li>
                         <li class="header__navigation-item">
-                            <a href="#" class="header__navigation-link">Наши клиенты</a>
+                            <a href="#clients" class="header__navigation-link">Наши клиенты</a>
                         </li>
                         <li class="header__navigation-item">
-                            <a href="#" class="header__navigation-link">Тарифы</a>
+                            <a href="#tariffs" class="header__navigation-link">Тарифы</a>
                         </li>
                         <li class="header__navigation-item">
-                            <a href="#" class="header__navigation-link">О компании</a>
+                            <a href="#company" class="header__navigation-link">О компании</a>
                         </li>
                     </ul>
                 </nav>
 
-                <button class="button header__button">Оставить заявку</button>
+                <button class="button header__button" onclick="location.href='#leadform'">
+                    Оставить заявку
+                </button>
             </div>
 
             <section class="lead">
-                <h1 class="lead__title">
+                <h1 class="title lead__title">
                     Увеличьте ваши продажи на маркеплейсах
                     <br class="lead__title_br" />на 30%
                 </h1>
                 <p class="lead__description">
-                    Сервис аналитики для продавцов торгующих через Wildberries, Lamoda,
-                    Ozon и другие.
+                    Сервис аналитики для продавцов торгующих через
+                    Wildberries, Lamoda, Ozon и другие.
                 </p>
-                <button class="button">Оставить заявку</button>
+                <button class="button" onclick="location.href='#leadform'">Оставить заявку</button>
             </section>
         </div>
     </header>
 
-    <main class="main">
-        <!-- Тут в идеале должны быть ссылки на подробные условия работы с маркетплейсами.
-      Либо на кейсы. В магазин пользователя не нужно уводить, это будет неправильно. -->
+    <main class="main" id="main">
         <section class="brand">
             <div class="brand__wrapper">
                 <a href="#" class="brand__link">
@@ -79,35 +71,40 @@ https://yadi.sk/i/z76v3NQyE_3Hig
             </div>
         </section>
 
-        <section class="how-works page__padding">
+        <section class="how-works page__padding" id="how-works">
             <div class="how-works__wrapper">
-                <h1 class="title how-works__title">
+                <h2 class="title how-works__title">
                     Увеличить продажи на 30%? Да, это возможно.
-                </h1>
+                </h2>
 
                 <div class="how-works__containers">
                     <div class="how-works__column">
-                        <!-- Размеры нужно убрать -->
-                        <img src="./blocks/how-works/__image/how-works-3.svg" alt="Анализ текущих продаж" class="how-works__image"/>
+                        <img src="./blocks/how-works/__image/how-works-3.jpg" alt="Анализ текущих продаж"
+                            class="how-works__image" />
                         <p class="how-works__description">
-                            Проанализируем ваши текущие продажи: строим аналитические модели
+                            Проанализируем ваши текущие продажи: строим
+                            аналитические модели
                         </p>
                     </div>
 
                     <div class="how-works__column">
-                        <img src="./blocks/how-works/__image/how-works-2.svg" alt="Найдем точки роста" class="how-works__image"/>
+                        <img src="./blocks/how-works/__image/how-works-2.jpg" alt="Найдем точки роста"
+                            class="how-works__image" />
                         <p class="how-works__description">
-                            Найдем точки роста: углубляемся в алгоритмы маркетплейсов и
-                            выявляем ключевые метрики роста продаж в маркетплейсах.
+                            Найдем точки роста: углубляемся в алгоритмы
+                            маркетплейсов и выявляем ключевые метрики роста
+                            продаж в маркетплейсах.
                         </p>
                     </div>
 
                     <div class="how-works__column">
-                        <img src="./blocks/how-works/__image/how-works-1.svg" alt="Разработаем решения и стратегию роста" class="how-works__image"/>
+                        <img src="./blocks/how-works/__image/how-works-1.jpg"
+                            alt="Разработаем решения и стратегию роста" class="how-works__image" />
                         <p class="how-works__description">
-                            Разработаем решения и стратегию роста: исследуем текущие
-                            конкурентные цены, прогнозируем цены в будущее, анализируем
-                            ликвидность, строим планы продаж.
+                            Разработаем решения и стратегию роста: исследуем
+                            текущие конкурентные цены, прогнозируем цены в
+                            будущее, анализируем ликвидность, строим планы
+                            продаж.
                         </p>
                     </div>
                 </div>
@@ -116,19 +113,23 @@ https://yadi.sk/i/z76v3NQyE_3Hig
 
         <section class="our">
             <div class="our__wrapper">
-                <img src="./blocks/our/__image/our.svg" alt="Наша команда помогает эффективнее продавать товары" class="our__image" />
+                <img src="./blocks/our/__image/our.jpg" alt="Наша команда помогает эффективнее продавать товары"
+                    class="our__image" />
                 <div class="our__container">
                     <p class="our__description">
-                        Наши технологии и команда помогает производствам эффективнее
-                        продавать товары на ведущих маркетплейсах и оптимизировать бюджеты
-                        на организации продаж.
+                        Наши технологии и команда помогает производствам
+                        эффективнее продавать товары на ведущих
+                        маркетплейсах и оптимизировать бюджеты на
+                        организации продаж.
                     </p>
-                    <button class="button our__button">Хочу с вами работать</button>
+                    <button class="button our__button" onclick="location.href='#leadform'">
+                        Хочу с вами работать
+                    </button>
                 </div>
             </div>
         </section>
 
-        <section class="clients">
+        <section class="clients" id="clients">
             <div class="clients__wrapper">
                 <h3 class="title clients__title">Клиенты и отзывы</h3>
                 <div class="clients__area">
@@ -137,17 +138,19 @@ https://yadi.sk/i/z76v3NQyE_3Hig
                             <img class="clients__image" src="blocks/clients/__image/clients-image.jpg"
                                 alt="Изображение клиента" />
                             <h4 class="clients__name">
-                                Иннокентий Архангелогородцев <br class="clients__name_br" />
+                                Иннокентий Архангелогородцев
+                                <br class="clients__name_br" />
                                 (компания 1)
                             </h4>
                         </div>
                         <p class="clients__review">
-                            Ось собственного вращения восстанавливает предел функции, как и
-                            предполагалось. Уравнение Эйлера, в соответствии с основным
-                            законом динамики, естественно преобразует лазерный момент силы
-                            трения. Уравнение возмущенного движения расточительно
-                            поддерживает момент силы трения, что несомненно приведет нас к
-                            истине.
+                            Ось собственного вращения восстанавливает предел
+                            функции, как и предполагалось. Уравнение Эйлера,
+                            в соответствии с основным законом динамики,
+                            естественно преобразует лазерный момент силы
+                            трения. Уравнение возмущенного движения
+                            расточительно поддерживает момент силы трения,
+                            что несомненно приведет нас к истине.
                         </p>
                     </div>
                     <div class="clients__column">
@@ -155,24 +158,26 @@ https://yadi.sk/i/z76v3NQyE_3Hig
                             <img class="clients__image" src="blocks/clients/__image/clients-image.jpg"
                                 alt="Изображение клиента" />
                             <h4 class="clients__name">
-                                Иннокентий Архангелогородцев <br class="clients__name_br" />
+                                Иннокентий Архангелогородцев
+                                <br class="clients__name_br" />
                                 (компания 1)
                             </h4>
                         </div>
                         <p class="clients__review">
-                            Ось собственного вращения восстанавливает предел функции, как и
-                            предполагалось. Уравнение Эйлера, в соответствии с основным
-                            законом динамики, естественно преобразует лазерный момент силы
-                            трения. Уравнение возмущенного движения расточительно
-                            поддерживает момент силы трения, что несомненно приведет нас к
-                            истине.
+                            Ось собственного вращения восстанавливает предел
+                            функции, как и предполагалось. Уравнение Эйлера,
+                            в соответствии с основным законом динамики,
+                            естественно преобразует лазерный момент силы
+                            трения. Уравнение возмущенного движения
+                            расточительно поддерживает момент силы трения,
+                            что несомненно приведет нас к истине.
                         </p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section class="tariffs">
+        <section class="tariffs" id="tariffs">
             <div class="tariffs__wrapper">
                 <h2 class="title">Тарифы</h2>
 
@@ -181,12 +186,16 @@ https://yadi.sk/i/z76v3NQyE_3Hig
                         <h3 class="title tariffs__title">SaaS</h3>
 
                         <ul class="tariffs__list">
-                            <li class="tariffs__item">Подписка на сервис аналитики.</li>
                             <li class="tariffs__item">
-                                Подойдет для специалистов по аналитике в вашей компании.
+                                Подписка на сервис аналитики.
                             </li>
                             <li class="tariffs__item">
-                                Есть ограничение по количеству маркетплейсов.
+                                Подойдет для специалистов по аналитике в
+                                вашей компании.
+                            </li>
+                            <li class="tariffs__item">
+                                Есть ограничение по количеству
+                                маркетплейсов.
                             </li>
                         </ul>
 
@@ -200,15 +209,18 @@ https://yadi.sk/i/z76v3NQyE_3Hig
 
                         <ul class="tariffs__list">
                             <li class="tariffs__item">
-                                Внедряем наши технологии в ваши процессе, помогаем настроить
-                                аналитику продаж.
+                                Внедряем наши технологии в ваши процессе,
+                                помогаем настроить аналитику продаж.
                             </li>
                             <li class="tariffs__item">
-                                Нет ограничений в количестве подключаемых маркетплейсов.
+                                Нет ограничений в количестве подключаемых
+                                маркетплейсов.
                             </li>
                         </ul>
 
-                        <div class="title tariffs__price">2-10% от продаж</div>
+                        <div class="title tariffs__price">
+                            2-10% от продаж
+                        </div>
                     </div>
 
                     <div class="tariffs__column">
@@ -216,7 +228,8 @@ https://yadi.sk/i/z76v3NQyE_3Hig
 
                         <ul class="tariffs__list">
                             <li class="tariffs__item">
-                                Полное погружение нашей команды в ваш бизнес и процессы.
+                                Полное погружение нашей команды в ваш бизнес
+                                и процессы.
                             </li>
                         </ul>
 
@@ -226,22 +239,25 @@ https://yadi.sk/i/z76v3NQyE_3Hig
                     </div>
                 </div>
 
-                <button class="button">Оставить заявку</button>
+                <button class="button" onclick="location.href='#leadform'">Оставить заявку</button>
             </div>
         </section>
 
         <section class="individual">
             <div class="individual__wrapper">
-                <img src="./blocks/individual/__image/individual.jpg" alt="Индивидуальный подход" class="individual__image" height="304"
-                    width="569" />
+                <img src="./blocks/individual/__image/individual.jpg" alt="Индивидуальный подход"
+                    class="individual__image" height="304" width="569" />
                 <div class="individual__container">
-                    <h2 class="title individual__title">Индивидуальный подход</h2>
+                    <h2 class="title individual__title">
+                        Индивидуальный подход
+                    </h2>
                     <p class="individual__description">
-                        У каждой компании, с которой мы работаем, своя концепция и свой
-                        голос. Мы развиваем уникальные продукты. Мы предлагаем несколько
-                        сервисов для развития вашей компании. Если вы не найдете нужной
-                        услуги, мы всегда готовы встретиться и обсудить, чем можем помочь
-                        именно вам.
+                        У каждой компании, с которой мы работаем, своя
+                        концепция и свой голос. Мы развиваем уникальные
+                        продукты. Мы предлагаем несколько сервисов для
+                        развития вашей компании. Если вы не найдете нужной
+                        услуги, мы всегда готовы встретиться и обсудить, чем
+                        можем помочь именно вам.
                     </p>
                 </div>
             </div>
@@ -250,66 +266,78 @@ https://yadi.sk/i/z76v3NQyE_3Hig
         <section class="experience">
             <div class="experience__wrapper">
                 <div class="experience__container">
-                    <h2 class="experience__title">
-                        <span class="experience__span">12 лет</span> опыта&nbsp;работы с
-                        данными
+                    <h2 class="title experience__title">
+                        <span class="experience__span">12 лет</span>
+                        опыта&nbsp;работы с данными
                     </h2>
                     <p class="experience__description">
-                        Мы занимаемся работой с данными совокупно уже более 12 лет. За это
-                        время наша экспертиза выросла многократно.
+                        Мы занимаемся работой с данными совокупно уже более
+                        12 лет. За это время наша экспертиза выросла
+                        многократно.
                     </p>
                 </div>
 
-                <img src="./blocks/experience/__image/experience__image.jpg" alt="12 лет опыта работы с данными" class="experience__image"/>
+                <img src="./blocks/experience/__image/experience__image.jpg" alt="12 лет опыта работы с данными"
+                    class="experience__image" />
             </div>
         </section>
 
         <section class="business">
             <div class="business__wrapper">
-                <img src="./blocks/business/__image/business.jpg" alt="Для наших клиентов мы решали IT и аналитические задачи" class="business__image"/>
+                <img src="./blocks/business/__image/business.jpg"
+                    alt="Для наших клиентов мы решали IT и аналитические задачи" class="business__image" />
                 <div class="business__container">
-                    <h2 class="business__title">Все, что необходимо бизнесу</h2>
+                    <h2 class="title business__title">
+                        Все, что необходимо бизнесу
+                    </h2>
                     <p class="business__description">
-                        Для наших клиентов мы решали IT и аналитические задачи, изучали
-                        алгоритмы продаж, работали с большими данными строя аналитические
-                        модели. Всё то, что нужно для уверенного роста бизнеса и продаж.
+                        Для наших клиентов мы решали IT и аналитические
+                        задачи, изучали алгоритмы продаж, работали с
+                        большими данными строя аналитические модели. Всё то,
+                        что нужно для уверенного роста бизнеса и продаж.
                     </p>
                 </div>
             </div>
         </section>
 
-        <section class="company">
+        <section class="company" id="company">
             <div class="company__wrapper">
                 <div class="company__container">
-                    <h2 class="company__title">Компания JStick</h2>
+                    <h2 class="title company__title">Компания JStick</h2>
                     <p class="company__description">
-                        Мы команда JStick. Наша работа — решать вопросы с аналитикой
-                        продаж на маркетплейсах для производственных кампаний.
+                        Мы команда JStick. Наша работа — решать вопросы с
+                        аналитикой продаж на маркетплейсах для
+                        производственных кампаний.
                     </p>
                     <p class="company__description">
-                        Мы занимаемся работой с данными совокупно уже более 12 лет. За это
-                        время наша экспертиза выросла многократно. Для наших клиентов мы
-                        решали IT и аналитические задачи, изучали алгоритмы продаж,
-                        работали с большими данными строя аналитические модели. Всё то,
-                        что нужно для уверенного роста бизнеса и продаж.
+                        Мы занимаемся работой с данными совокупно уже более
+                        12 лет. За это время наша экспертиза выросла
+                        многократно. Для наших клиентов мы решали IT и
+                        аналитические задачи, изучали алгоритмы продаж,
+                        работали с большими данными строя аналитические
+                        модели. Всё то, что нужно для уверенного роста
+                        бизнеса и продаж.
                     </p>
                 </div>
 
-                <img src="./blocks/company/__image/company.jpg" alt="Мы команда JStick" class="company__image"/>
+                <img src="./blocks/company/__image/company.jpg" alt="Мы команда JStick" class="company__image" />
             </div>
         </section>
 
         <section class="action">
-            <h2 class="action__title">
-                Вам лишь останется сфокусироваться на производственных процессах, а
-                заботы о анализе данных продаж мы возьмем на себя.
+            <h2 class="title action__title">
+                Вам лишь останется сфокусироваться на производственных
+                процессах, а заботы о анализе данных продаж мы возьмем на
+                себя.
             </h2>
         </section>
 
-        <section class="leadform">
+        <section class="leadform" id="leadform">
             <div class="leadform__wrapper">
-                <h3 class="leadform__title">Вы готовы работать с нами?</h3>
-                <h4 class="leadform__subtitle">Наши менеджеры свяжутся с вами</h4>
+                <h3 class="title leadform__title">Вы готовы работать с нами?</h3>
+                <h4 class="leadform__subtitle">
+                    Наши менеджеры свяжутся с вами
+                </h4>
                 <form class="leadform__form" action="">
                     <input class="input input__name" type="text" name="name" placeholder="Ваше имя" />
                     <input class="input input__email" type="email" name="email" placeholder="Введите Email" />
@@ -332,16 +360,16 @@ https://yadi.sk/i/z76v3NQyE_3Hig
                         <nav class="footer__navigation">
                             <ul class="footer__navigation-list">
                                 <li class="footer__navigation-item">
-                                    <a href="#" class="footer__navigation-link">Как это работает</a>
+                                    <a href="#how-works" class="footer__navigation-link">Как это работает</a>
                                 </li>
                                 <li class="footer__navigation-item">
-                                    <a href="#" class="footer__navigation-link">Наши клиенты</a>
+                                    <a href="#clients" class="footer__navigation-link">Наши клиенты</a>
                                 </li>
                                 <li class="footer__navigation-item">
-                                    <a href="#" class="footer__navigation-link">Тарифы</a>
+                                    <a href="#tariffs" class="footer__navigation-link">Тарифы</a>
                                 </li>
                                 <li class="footer__navigation-item">
-                                    <a href="#" class="footer__navigation-link">О компании</a>
+                                    <a href="#company" class="footer__navigation-link">О компании</a>
                                 </li>
                             </ul>
                         </nav>
@@ -353,7 +381,8 @@ https://yadi.sk/i/z76v3NQyE_3Hig
                         <ul class="footer__navigation-list">
                             <li class="footer__navigation-item">
                                 <p class="footer__navigation-text">
-                                    Адрес: Москва, <br />Лубянский проезд, 19-1
+                                    Адрес: Москва, <br />Лубянский проезд,
+                                    19-1
                                 </p>
                             </li>
                             <li class="footer__navigation-item">
